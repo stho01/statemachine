@@ -11,7 +11,7 @@ namespace Zed.StateMachine
     /// A default implementation of a state machine  
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public class StateMachine<TEntity> : IStateMachine<TEntity>
+    public class DefaultStateMachine<TEntity> : IStateMachine<TEntity>
     {
         //******************************************************
         //** Properties
@@ -48,7 +48,7 @@ namespace Zed.StateMachine
         //** Constructor
         //******************************************************
         
-        public StateMachine(TEntity owner)
+        public DefaultStateMachine(TEntity owner)
         {
             _owner = owner;
         }
