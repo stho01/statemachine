@@ -91,9 +91,13 @@ namespace TestBooth.Entities
         /// <param name="workoutScore"></param>
         public void IncreaseFitness(int workoutScore)
         {
+            var cachedColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"{workoutScore}, {Stamina}");
+            Console.WriteLine(workoutScore * Stamina * 0.5);
+            Console.ForegroundColor = cachedColor;
+
             Fitness += (int)(workoutScore * Stamina * 0.5);
         }
-
-        
     }
 }

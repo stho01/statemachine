@@ -22,7 +22,8 @@ namespace TestBooth.States
         /// <param name="entity"></param>
         protected void Talk(T entity, string msg)
         {
-            Console.WriteLine($"[{DateTime.Now.ToShortTimeString()}] {entity.Name, 30} : {msg}");
+            var truncatedName = entity.Name?.Substring(0, Math.Min(entity.Name.Length, 9));
+            Console.WriteLine($"[{DateTime.Now.ToShortTimeString()}] {$"{truncatedName}.", 10} : {msg}");
         }
     }
 }

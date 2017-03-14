@@ -10,7 +10,7 @@ namespace TestBooth
     {
         static void Main(string[] args)
         {
-            Game.Instance.Run();
+            Game.Instance.Init().Run();
         }
     }
 }

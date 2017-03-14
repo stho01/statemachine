@@ -34,5 +34,10 @@ namespace Zed.StateMachine.Core
         /// </summary>
         /// <param name="state"></param>
         void ChangeState(IState<TEntity> state);
+
+        /// <summary>
+        /// Updates current active states.
+        /// </summary>
+        void Update();
     }
 }

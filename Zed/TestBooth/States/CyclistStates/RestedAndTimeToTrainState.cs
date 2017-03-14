@@ -28,7 +28,7 @@ namespace TestBooth.States.CyclistStates
         //** Properties
         //******************************************************
 
-        public int WorkoutScore { get; private set; } 
+        public double WorkoutScore { get; private set; } 
         public int WorkoutIntensity { get; private set; }
         
         //******************************************************
@@ -60,7 +60,7 @@ namespace TestBooth.States.CyclistStates
         /// <param name="entity"></param>
         public override void Exit(Cyclist entity)
         {
-            entity.IncreaseFitness(WorkoutScore);
+            entity.IncreaseFitness((int)WorkoutScore);
             Talk(entity, $"Oh lord.. That was a good one, time to hit the shower. current fitness = {entity.Fitness}");
         }
 
@@ -76,6 +76,7 @@ namespace TestBooth.States.CyclistStates
             }
             else
             {
+                WorkoutScore += WorkoutIntensity * Math.PI / 100;
                 Talk(entity, RandomMessages.GetRandom());
                 entity.IncreaseFatigue(1);
             }

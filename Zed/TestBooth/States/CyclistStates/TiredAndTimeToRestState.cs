@@ -23,8 +23,9 @@ namespace TestBooth.States.CyclistStates
         {
             if (entity.IsRested)
             {
-                var intensity = (int)(entity.Stamina * entity.Fatigue * 0.25);
-                entity.GetFSM().ChangeState(new RestedAndTimeToTrainState(intensity));
+                var form = (entity.Stamina * entity.Fitness * 0.25);
+                var intensity = Math.Max(form, 1);
+                entity.GetFSM().ChangeState(new RestedAndTimeToTrainState((int)intensity));
             }
             else
             {

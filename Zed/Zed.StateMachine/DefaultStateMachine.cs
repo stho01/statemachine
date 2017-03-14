@@ -109,5 +109,17 @@ namespace Zed.StateMachine
         {
             PreviousState = state;
         }
+
+        /// <summary>
+        /// Updates current active states.
+        /// </summary>
+        public void Update()
+        {
+            if (_owner != null)
+            {
+                GlobalState?.Update(_owner);
+                CurrentState?.Update(_owner);
+            }
+        }
     }
 }
