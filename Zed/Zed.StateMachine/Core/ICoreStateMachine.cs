@@ -13,6 +13,11 @@ namespace Zed.StateMachine.Core
     public interface ICoreStateMachine<TEntity>
     {
         /// <summary>
+        /// 
+        /// </summary>
+        void SetOwner(TEntity owner);
+
+        /// <summary>
         /// The current state is a reference to the current active state.
         /// This reference can ofc. change, and should be changed in the ChangeState method. 
         /// </summary>

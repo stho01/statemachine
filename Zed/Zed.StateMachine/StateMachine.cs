@@ -48,15 +48,22 @@ namespace Zed.StateMachine
         //** Constructor
         //******************************************************
         
-        public DefaultStateMachine(TEntity owner)
+        public DefaultStateMachine()
         {
-            _owner = owner;
+            
         }
 
         //******************************************************
         //** Public API.
         //******************************************************
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <returns></returns>
+        public void SetOwner(TEntity owner) => _owner = owner;
+        
         /// <summary>
         /// Changes the state 
         /// Calls exit on current state and enter of the new state is called. 

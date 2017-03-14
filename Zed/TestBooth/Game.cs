@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestBooth.Entities;
+using Zed.StateMachine;
 
 namespace TestBooth
 {
@@ -13,6 +15,12 @@ namespace TestBooth
         /// </summary>
         public static readonly Game Instance = new Game();
 
+        //******************************************************
+        //** Fields
+        //******************************************************
+
+        public Cyclist cyclist = new Cyclist(new DefaultStateMachine<Cyclist>());
+
         /// <summary>
         /// Private constructor cus this is a singleton..
         /// </summary>
@@ -21,10 +29,20 @@ namespace TestBooth
 
         }
         
+        public Game Initialise()
+        {
+
+            return Instance;
+        }
         
         public void Run()
         {
 
+        }
+
+        public void Update()
+        {
+            
         }
     }
 }
