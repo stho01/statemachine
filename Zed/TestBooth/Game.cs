@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using TestBooth.Entities;
-using TestBooth.States.CyclistStates;
-using Zed.StateMachine;
+using TheTiredCyclist.Entities;
+using TheTiredCyclist.States.CyclistStates;
+using Stho.StateMachine;
 
-namespace TestBooth
+namespace TheTiredCyclist
 {
     public class Game
     {

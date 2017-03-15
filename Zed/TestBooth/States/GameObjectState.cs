@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestBooth.Entities;
-using Zed.StateMachine.Core;
+using TheTiredCyclist.Entities;
+using Stho.StateMachine.Core;
 
-namespace TestBooth.States
+namespace TheTiredCyclist.States
 {
     public abstract class GameObjectState<T> : IState<T>
         where T : GameObject
@@ -23,7 +23,7 @@ namespace TestBooth.States
         protected void Talk(T entity, string msg)
         {
             var truncatedName = entity.Name?.Substring(0, Math.Min(entity.Name.Length, 9));
-            Console.WriteLine($"[{DateTime.Now.ToShortTimeString()}] {$"{truncatedName}.", 10} : {msg}");
+            Console.WriteLine($"[{DateTime.Now.ToLongTimeString()}] {$"{truncatedName}.", 10} : {msg}");
         }
     }
 }

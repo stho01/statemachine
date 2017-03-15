@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestBooth.Core
+namespace TheTiredCyclist.Core
 {
     /// <summary>
     /// A contract describing a simple entity.

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestBooth.Entities;
+using TheTiredCyclist.Entities;
 
-namespace TestBooth.States.CyclistStates
+namespace TheTiredCyclist.States.CyclistStates
 {
     public class TiredAndTimeToRestState : GameObjectState<Cyclist>
     {

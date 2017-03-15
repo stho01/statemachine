@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestBooth.Core;
-using Zed.StateMachine;
-using Zed.StateMachine.Core;
+using TheTiredCyclist.Core;
+using Stho.StateMachine;
+using Stho.StateMachine.Core;
 
-namespace TestBooth.Entities
+namespace TheTiredCyclist.Entities
 {
     public class StateGameObject<T> : GameObject, IStateEntity<T>
         where T : IStateEntity<T>

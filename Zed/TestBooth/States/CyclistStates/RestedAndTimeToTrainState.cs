@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestBooth.Entities;
-using TestBooth.Utils;
-using Zed.StateMachine.Core;
+using TheTiredCyclist.Entities;
+using TheTiredCyclist.Utils;
+using Stho.StateMachine.Core;
 
-namespace TestBooth.States.CyclistStates
+namespace TheTiredCyclist.States.CyclistStates
 {
     public class RestedAndTimeToTrainState : GameObjectState<Cyclist>
     {

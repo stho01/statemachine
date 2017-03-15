@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zed.StateMachine.Core;
+using Stho.StateMachine.Core;
 
-namespace Zed.StateMachine
+namespace Stho.StateMachine
 {
     /// <summary>
     /// A default implementation of a state machine  

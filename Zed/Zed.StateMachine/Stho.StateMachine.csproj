@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6330C94A-FA5B-48B3-BA61-32DB7E824F54}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{A79DA390-A738-4E22-BE12-A4A6FCFCE9F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestBooth</RootNamespace>
-    <AssemblyName>TestBooth</AssemblyName>
+    <RootNamespace>Stho.StateMachine</RootNamespace>
+    <AssemblyName>Stho.StateMachine</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,28 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\IEntity.cs" />
-    <Compile Include="Core\IStateEntity.cs" />
-    <Compile Include="Entities\Cyclist.cs" />
-    <Compile Include="Entities\GameObject.cs" />
-    <Compile Include="Entities\StateGameObject.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Core\ICoreStateMachine.cs" />
+    <Compile Include="Core\IState.cs" />
+    <Compile Include="Core\IStateMachine.cs" />
+    <Compile Include="DefaultStateMachine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="States\CyclistStates\RestedAndTimeToTrainState.cs" />
-    <Compile Include="States\CyclistStates\TiredAndTimeToRestState.cs" />
-    <Compile Include="States\GameObjectState.cs" />
-    <Compile Include="Utils\RandomMessenger.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Zed.StateMachine\Zed.StateMachine.csproj">
-      <Project>{a79da390-a738-4e22-be12-a4a6fcfce9f6}</Project>
-      <Name>Zed.StateMachine</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
