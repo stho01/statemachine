@@ -10,7 +10,15 @@ namespace Stho.StateMachine.Core
     /// A contract describing a core state machine.
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public interface ICoreStateMachine<TEntity>
+    public interface ICoreStateMachine<TEntity> : ICoreStateMachine<TEntity, IState<TEntity>> { }
+
+    /// <summary>
+    /// A contract describing a core state machine.
+    /// </summary>
+    /// <typeparam name="TEntity"></typeparam>
+    /// <typeparam name="TStateType"></typeparam>
+    public interface ICoreStateMachine<TEntity, TStateType>
+        where TStateType : IState<TEntity>
     {
         /// <summary>
         /// 
@@ -21,23 +29,18 @@ namespace Stho.StateMachine.Core
         /// The current state is a reference to the current active state.
         /// This reference can ofc. change, and should be changed in the ChangeState method. 
         /// </summary>
-        IState<TEntity> CurrentState { get; }
+        TStateType CurrentState { get; }
 
         /// <summary>
         /// Sets the current state.
         /// </summary>
         /// <param name="state"></param>
-        void SetCurrentState(IState<TEntity> state);
+        void SetCurrentState(TStateType state);
 
         /// <summary>
         /// Changes the state 
         /// </summary>
         /// <param name="state"></param>
-        void ChangeState(IState<TEntity> state);
-
-        /// <summary>
-        /// Updates current active states.
-        /// </summary>
-        void Update();
+        void ChangeState(TStateType state);
     }
 }

@@ -54,7 +54,7 @@ namespace TheTiredCyclist.Entities
         //** Ctor
         //******************************************************
 
-        public Cyclist(IStateMachine<Cyclist> fsm)
+        public Cyclist(IUpdatableStateMachine<Cyclist> fsm)
             : base(fsm)
         {
             fsm.SetOwner(this);

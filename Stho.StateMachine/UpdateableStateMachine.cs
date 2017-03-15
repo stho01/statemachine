@@ -11,7 +11,7 @@ namespace Stho.StateMachine
     /// A default implementation of a state machine  
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public class DefaultStateMachine<TEntity> : IStateMachine<TEntity>
+    public class UpdateableStateMachine<TEntity> : IStateMachine<TEntity, IUpdateableState<TEntity>>, IUpdatableStateMachine<TEntity>
     {
         //******************************************************
         //** Properties
@@ -21,24 +21,24 @@ namespace Stho.StateMachine
         /// The current state is a reference to the current active state.
         /// This reference can ofc. change, and should be changed in the ChangeState method. 
         /// </summary>
-        public IState<TEntity> CurrentState { get; private set; }
+        public IUpdateableState<TEntity> CurrentState { get; private set; }
 
         /// <summary>
         /// The global state is a state that if not null
         /// always should update. The global state is typically used for
         /// frequently called checks which can contribute to a current state change. 
         /// </summary>
-        public IState<TEntity> GlobalState { get; private set; }
+        public IUpdateableState<TEntity> GlobalState { get; private set; }
 
         /// <summary>
         /// The previous state is a reference to the previously active state. 
         /// </summary>
-        public IState<TEntity> PreviousState { get; private set; }
-        
+        public IUpdateableState<TEntity> PreviousState { get; private set; }
+
         //******************************************************
         //** Fields
         //******************************************************
-        
+
         /// <summary>
         /// Holds a reference of the owner of the state machine. 
         /// </summary>
@@ -48,10 +48,7 @@ namespace Stho.StateMachine
         //** Constructor
         //******************************************************
         
-        public DefaultStateMachine()
-        {
-            
-        }
+        public UpdateableStateMachine() { }
 
         //******************************************************
         //** Public API.
@@ -69,7 +66,7 @@ namespace Stho.StateMachine
         /// Calls exit on current state and enter of the new state is called. 
         /// </summary>
         /// <param name="state"></param>
-        public void ChangeState(IState<TEntity> state)
+        public void ChangeState(IUpdateableState<TEntity> state)
         {
             if (state == null)
                 throw new NullReferenceException("state can not be null");
@@ -87,7 +84,7 @@ namespace Stho.StateMachine
         /// Sets the current state.
         /// </summary>
         /// <param name="state"></param>
-        public void SetCurrentState(IState<TEntity> state)
+        public void SetCurrentState(IUpdateableState<TEntity> state)
         {
             CurrentState = state;
         }
@@ -96,7 +93,7 @@ namespace Stho.StateMachine
         /// Set global state. 
         /// </summary>
         /// <param name="state"></param>
-        public void SetGlobalState(IState<TEntity> state)
+        public void SetGlobalState(IUpdateableState<TEntity> state)
         {
             GlobalState = state;
         }
@@ -105,7 +102,7 @@ namespace Stho.StateMachine
         /// Set the previous state. 
         /// </summary>
         /// <param name="state"></param>
-        public void SetPreviousState(IState<TEntity> state)
+        public void SetPreviousState(IUpdateableState<TEntity> state)
         {
             PreviousState = state;
         }

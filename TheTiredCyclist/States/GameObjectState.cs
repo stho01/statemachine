@@ -8,7 +8,7 @@ using Stho.StateMachine.Core;
 
 namespace TheTiredCyclist.States
 {
-    public abstract class GameObjectState<T> : IState<T>
+    public abstract class GameObjectState<T> : IUpdateableState<T>
         where T : GameObject
     {
         public abstract void Enter(T entity);

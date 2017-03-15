@@ -43,7 +43,9 @@
     <Compile Include="Core\ICoreStateMachine.cs" />
     <Compile Include="Core\IState.cs" />
     <Compile Include="Core\IStateMachine.cs" />
-    <Compile Include="DefaultStateMachine.cs" />
+    <Compile Include="Core\IUpdatableStateMachine.cs" />
+    <Compile Include="Core\IUpdateableState.cs" />
+    <Compile Include="UpdateableStateMachine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

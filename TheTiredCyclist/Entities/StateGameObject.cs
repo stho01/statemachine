@@ -16,13 +16,13 @@ namespace TheTiredCyclist.Entities
         //** Fields
         //******************************************************
         
-        private IStateMachine<T> _fsm;
+        private IUpdatableStateMachine<T> _fsm;
         
         //******************************************************
         //** Ctor
         //******************************************************
         
-        public StateGameObject(IStateMachine<T> fsm)
+        public StateGameObject(IUpdatableStateMachine<T> fsm)
         {
             _fsm = fsm;
         }
@@ -31,7 +31,7 @@ namespace TheTiredCyclist.Entities
         //** Public API
         //******************************************************
 
-        public IStateMachine<T> GetFSM() => _fsm;
+        public IUpdatableStateMachine<T> GetFSM() => _fsm;
 
         public void Update()
         {

@@ -35,7 +35,7 @@ namespace TheTiredCyclist
         {
             Console.SetWindowSize(Console.LargestWindowWidth/2, Console.LargestWindowHeight/2);
 
-            var cyclistStateMachine = new DefaultStateMachine<Cyclist>();
+            var cyclistStateMachine = new UpdateableStateMachine<Cyclist>();
             cyclistStateMachine.SetCurrentState(new RestedAndTimeToTrainState(1));
             cyclist = new Cyclist(cyclistStateMachine);
             cyclist.Name = "Froome";

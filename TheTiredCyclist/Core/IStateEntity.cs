@@ -7,14 +7,21 @@ using Stho.StateMachine.Core;
 
 namespace TheTiredCyclist.Core
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IStateEntity : IEntity
     {
-        IStateMachine<IStateEntity> GetFSM();
+        IUpdatableStateMachine<IStateEntity> GetFSM();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IStateEntity<T> : IEntity
         where T : IStateEntity<T>
     {
-        IStateMachine<T> GetFSM();
+        IUpdatableStateMachine<T> GetFSM();
     }
 }
