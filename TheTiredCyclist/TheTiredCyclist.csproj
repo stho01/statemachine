@@ -60,7 +60,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Zed.StateMachine\Stho.StateMachine.csproj">
+    <ProjectReference Include="..\Stho.StateMachine\Stho.StateMachine.csproj">
       <Project>{a79da390-a738-4e22-be12-a4a6fcfce9f6}</Project>
       <Name>Stho.StateMachine</Name>
     </ProjectReference>
