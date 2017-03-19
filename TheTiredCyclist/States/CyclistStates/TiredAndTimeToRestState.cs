@@ -30,7 +30,7 @@ namespace TheTiredCyclist.States.CyclistStates
             else
             {
                 entity.DecreaseFatigue();
-                Talk(entity, $"ZZZzzzz..... Fatigue = {entity.Fatigue}");
+                Talk(entity, $"ZZZzzzz.....");
             }
         }
     }

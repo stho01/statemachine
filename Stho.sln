@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stho.StateMachine", "Stho.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheTiredCyclist", "TheTiredCyclist\TheTiredCyclist.csproj", "{6330C94A-FA5B-48B3-BA61-32DB7E824F54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramStateExample", "ProgramStateExample\ProgramStateExample.csproj", "{65EBF810-8AEC-4C46-B02D-F32949345650}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6330C94A-FA5B-48B3-BA61-32DB7E824F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6330C94A-FA5B-48B3-BA61-32DB7E824F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6330C94A-FA5B-48B3-BA61-32DB7E824F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65EBF810-8AEC-4C46-B02D-F32949345650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65EBF810-8AEC-4C46-B02D-F32949345650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65EBF810-8AEC-4C46-B02D-F32949345650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65EBF810-8AEC-4C46-B02D-F32949345650}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

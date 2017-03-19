@@ -50,5 +50,14 @@ namespace Stho.StateMachine
         /// </summary>
         /// <param name="owner"></param>
         public void SetOwner(TEntity owner) => _owner = owner;
+
+        //******************************************************
+        //** Ctor
+        //******************************************************
+
+        public SimpleStateMachine(TEntity owner)
+        {
+            _owner = owner;
+        }
     }
 }
